@@ -1,13 +1,14 @@
 import unittest
 import math
 
+
 def custom_modf(x):
     """
     Calculate the integer and fractional parts of a number.
-    
+
     Args:
         x (float): The input number.
-    
+
     Returns:
         tuple: A tuple containing the fractional and integer parts.
     """
@@ -16,13 +17,14 @@ def custom_modf(x):
     # Calculate the fractional part
     fractional_part = x - integer_part
     # Return a tuple containing both parts
-    return (fractional_part, integer_part)
+    return fractional_part, integer_part
+
 
 class TestModfFunction(unittest.TestCase):
     """
     A test case for the custom_modf function.
     """
-    
+
     def test_modf_positive_number(self):
         """
         Test custom_modf with a positive number.
@@ -40,6 +42,7 @@ class TestModfFunction(unittest.TestCase):
         Test custom_modf with zero.
         """
         self.assertEqual(custom_modf(0), (0.0, 0.0))
+
 
 if __name__ == '__main__':
     unittest.main()
